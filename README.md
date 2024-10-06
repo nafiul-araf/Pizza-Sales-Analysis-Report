@@ -51,6 +51,3 @@ The following insights can be generated from the data:
 - **Customer Segmentation**: Add segmentation based on customer demographics and purchasing behavior.
 - **Inventory Optimization**: Use sales data to optimize inventory levels for popular pizza categories and sizes.
 - **Promotional Insights**: Analyze the impact of promotions on pizza sales and order volume.
-
-## Contact Information
-For any questions or suggestions, please contact [Your Name] at [Your Email Address].
