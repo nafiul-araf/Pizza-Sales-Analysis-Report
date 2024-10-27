@@ -50,6 +50,17 @@ The following insights can be generated from the data:
 # Analysis with SQL
 
 ## Database Setup
+### Data Loading with `LOAD DATA INFILE`
+
+The `LOAD DATA INFILE` method is used here to import data from an external CSV file directly into the `pizza_dataset` table in MySQL. This bulk loading approach allows for efficient importing of large datasets. The command includes the following options for accurate data parsing and handling:
+
+- **`FIELDS TERMINATED BY ','`**: Specifies that fields in the CSV file are separated by commas.
+- **`OPTIONALLY ENCLOSED BY '"'`**: Allows fields to be optionally enclosed by double quotes, useful for text fields containing commas.
+- **`LINES TERMINATED BY '\r\n'`**: Treats each line in the CSV file as a new row in the table.
+- **Date Formatting**: Uses `STR_TO_DATE` to convert date strings into MySQL's DATE format during the import process.
+
+This method helps streamline the data loading process by minimizing the need for manual data entry and ensuring efficient data import.
+
 1. **Create Schema and Load Data**
     ```sql
     CREATE SCHEMA pizza_sales;
@@ -219,6 +230,7 @@ The following insights can be generated from the data:
 - **Stored Procedures** to retrieve top/bottom sellers based on various criteria (e.g., revenue, quantity, order count).
 
 #### Stored Procedure for Top 5 Sellers:
+- SP-1
     ```sql
     DELIMITER $$
     CREATE PROCEDURE get_top_5(IN expr VARCHAR(255), IN alias_name VARCHAR(255))
@@ -240,6 +252,7 @@ The following insights can be generated from the data:
     ```
 
 #### Stored Procedure for Bottom 5 Sellers:
+- SP-2
     ```sql
     DELIMITER $$
     CREATE PROCEDURE get_bottom_5(IN expr VARCHAR(255), IN alias_name VARCHAR(255))
@@ -262,28 +275,38 @@ The following insights can be generated from the data:
 
 ### Examples of Using the Stored Procedures:
 #### Q-7: Top 5 Best-Selling Pizzas by Revenue
+- Call SP-1
     ```sql
     CALL get_top_5('SUM(CAST(total_price AS DECIMAL(10, 2)))', 'revenue');
     ```
 
 #### Q-8: Top 5 Worst-Selling Pizzas by Revenue
+- Call SP-2
     ```sql
     CALL get_bottom_5('SUM(CAST(total_price AS DECIMAL(10, 2)))', 'revenue');
     ```
 
 #### Q-9: Top 5 Best-Selling Pizzas by Quantity
+- Call SP-1
     ```sql
     CALL get_top_5('SUM(quantity)', 'quantity');
     ```
 
 #### Q-10: Top 5 Worst-Selling Pizzas by Quantity
+- Call SP-2
     ```sql
     CALL get_bottom_5('SUM(quantity)', 'quantity');
     ```
 
 #### Q-11: Top 5 Best-Selling Pizzas by Order Count
+- Call SP-1
     ```sql
     CALL get_top_5('COUNT(DISTINCT order_id)', 'orders');
+    ```
+#### Q-12: Top 5 Worst-Selling Pizzas by Order Count
+- Call SP-1
+    ```sql
+    CALL get_bottom_5('COUNT(DISTINCT order_id)', 'orders');
     ```
 
 #### Q-12: Top 5 Worst-Selling Pizzas by Order Count
