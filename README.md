@@ -1,6 +1,6 @@
 # Pizza Sales Data Analysis using Power BI and SQL
 
-**web link** [here](https://app.powerbi.com/view?r=eyJrIjoiNDEyOTJkMjktMGIwOS00MmRiLWJjNGEtN2U3ZTYyOWVhYWQwIiwidCI6IjhjMTI4NjJkLWZjYWYtNGEwNi05M2FjLTk0Yjk3YjVjZWQ1NSIsImMiOjEwfQ%3D%3D)
+[![Click on the Image]([image_path.png](https://github.com/nafiul-araf/Pizza-Sales-Analysis-Report/blob/main/Home.JPG))](https://app.powerbi.com/view?r=eyJrIjoiNDEyOTJkMjktMGIwOS00MmRiLWJjNGEtN2U3ZTYyOWVhYWQwIiwidCI6IjhjMTI4NjJkLWZjYWYtNGEwNi05M2FjLTk0Yjk3YjVjZWQ1NSIsImMiOjEwfQ%3D%3D)
 
 ## Project Overview
 This project focuses on analyzing pizza sales data using Power BI. The goal is to provide insights into key performance indicators (KPIs) such as total revenue, total pizzas sold, average order value, and more. The data includes sales, orders, and product performance for a pizza business across various dimensions like pizza categories, sizes, and time periods. This repository also contains SQL scripts for analyzing pizza sales data, including KPIs, revenue distribution by category and size, and ranking best/worst sellers by revenue, quantity, and order count.
