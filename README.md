@@ -1,6 +1,7 @@
 # Pizza Sales Data Analysis using Power BI and SQL
 
 🔗 **Click on the image** to see the dashboard!
+
 [![My Project Screenshot](https://github.com/nafiul-araf/Pizza-Sales-Analysis-Report/blob/main/Home.JPG)](https://app.powerbi.com/view?r=eyJrIjoiNDEyOTJkMjktMGIwOS00MmRiLWJjNGEtN2U3ZTYyOWVhYWQwIiwidCI6IjhjMTI4NjJkLWZjYWYtNGEwNi05M2FjLTk0Yjk3YjVjZWQ1NSIsImMiOjEwfQ%3D%3D)
 
 ## Project Overview
