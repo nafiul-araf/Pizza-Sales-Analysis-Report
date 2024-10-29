@@ -49,7 +49,7 @@ The following insights can be generated from the data:
 - **Orders by Day and Month**: Highlights trends in customer ordering patterns by days of the week and months of the year.
 - **Revenue by Pizza Category and Size**: Breaks down the revenue distribution by pizza type (Classic, Supreme, Veggie, Chicken) and by pizza size.
 
-# Analysis with SQL
+# [Analysis with SQL](https://github.com/nafiul-araf/Pizza-Sales-Analysis-Report/blob/main/SQL%20Queries/Analysis.sql)
 
 ## Database Setup
 ### Data Loading with `LOAD DATA INFILE`
@@ -312,6 +312,7 @@ This method helps streamline the data loading process by minimizing the need for
     ```
 
 #### Q-12: Top 5 Worst-Selling Pizzas by Order Count
+-- Call SP-2
     ```sql
     CALL get_bottom_5('COUNT(DISTINCT order_id)', 'orders');
     ```
