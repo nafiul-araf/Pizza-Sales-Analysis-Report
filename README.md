@@ -312,7 +312,7 @@ This method helps streamline the data loading process by minimizing the need for
     ```
 
 #### Q-12: Top 5 Worst-Selling Pizzas by Order Count
--- Call SP-2
+- Call SP-2
     ```sql
     CALL get_bottom_5('COUNT(DISTINCT order_id)', 'orders');
     ```
